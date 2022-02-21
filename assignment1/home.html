@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <title>Assignment 2</title>
+    <title>Assignment 1</title>
   </head>
 <body>    
 <div class="container">
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <img src="https://chinmaybadhe.github.io/photos/rodeo-drive.jpg" id="LAImage" alt="LA city" style="width:3000px;height:800px;object-fit: cover; object-position: center bottom;">
+  <img src="https://chinmaybadhe.github.io/assignment1/photos/rodeo-drive.jpg" id="LAImage" alt="LA city" style="width:3000px;height:800px;object-fit: cover; object-position: center bottom;">
 
   <h1 id="overlaytext"> LA - The City of Angels </h1>
 
@@ -64,7 +64,7 @@
 
 <script>
 
-  let DATA = 'https://chinmaybadhe.github.io/data/data.json';  
+  let DATA = 'https://chinmaybadhe.github.io/assignment1/data/data.json';  
   let textData=null;
   async function fetchData(DATA) {
 
@@ -82,7 +82,7 @@
         for (let key2 in data[key]) {
 
           let htmlsegment= 
-        "<div class='cards' ><img src=https://chinmaybadhe.github.io/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"><p class='cardHeading'>"+data[key][key2].heading+"</p><p class='cardBody'>"+data[key][key2].text+"</p></div>";
+        "<div class='cards' ><img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"><p class='cardHeading'>"+data[key][key2].heading+"</p><p class='cardBody'>"+data[key][key2].text+"</p></div>";
 
           html+=htmlsegment;
 
@@ -105,7 +105,7 @@
 
           }
           htmlsegment+="</p></div><div id='section3image'>";
-          htmlsegment+="<img src=https://chinmaybadhe.github.io/photos/lasky.png "+ "alt='LA Sky'></div>";
+          htmlsegment+="<img src=https://chinmaybadhe.github.io/assignment1/photos/lasky.png "+ "alt='LA Sky'></div>";
 
 
           let section3 =document.querySelector('.section-3');
@@ -128,14 +128,14 @@
 
                       htmlsegment+=
 
-                          "<div class='section4image'> <img src=https://chinmaybadhe.github.io/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div><div class='section4text'><h1 class='heading' style='text-align: left'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div>";                
+                          "<div class='section4image'> <img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div><div class='section4text'><h1 class='heading' style='text-align: left'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div>";                
                       }
 
                     else{
 
                       htmlsegment+=
 
-                          "<div class='section4text'><h1 class='heading' style='text-align: right'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div><div class='section4image'> <img src=https://chinmaybadhe.github.io/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div>";       
+                          "<div class='section4text'><h1 class='heading' style='text-align: right'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div><div class='section4image'> <img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div>";       
 
 
 
