@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 *{
   margin: 0px;
@@ -65,10 +65,16 @@
     text-decoration: none;
   }
 
-  .message{
+  #message{
 
     width: 3000px ;
-    height: 560px;
+    height: 1060px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 400px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
 
 
 
@@ -91,7 +97,6 @@
     height: 600px;
     background-color: #101012;
     color: #fff;
-    /*padding: 200px;*/
 
 
   }
