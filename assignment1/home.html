@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <title>Assignment 1</title>
+  </head>
+<body>    
+<div class="container">
+
+  <div class="navbar">
+    <div class="navbarElements">
+
+      <a href="#" id="Home" class="navbarButtons">Home </a>
+      <a href="#" class="navbarButtons">Explore </a>
+      <a href="#" class="navbarButtons">Contact </a>
+
+    </div>
+  </div>
+
+  <img src="https://chinmaybadhe.github.io/assignment1/photos/rodeo-drive.jpg" id="LAImage" alt="LA city" style="width:3000px;height:800px;object-fit: cover; object-position: center bottom;">
+
+  <h1 id="overlaytext"> LA - The City of Angels </h1>
+
+
+  <div class="cardscontainer"></div>
+  <div class='section-3'></div>
+  <div class='section-4'></div>
+  <div class='footer'>
+    <div id='column1'>
+      
+      <p>  Some quotes make no sense and this is one of them</p>
+      <p>~ Chinmay</p>
+    </div>
+
+    <div id='column2'>
+
+      <div id=#contactcontainer>
+      
+        <p style="font-weight: bolder;">Designed By</p>
+        <p id='name'>Chinmay Badhe</p>
+
+        <a href="mailto:badhe@usc.edu">badhe@usc.edu</a>
+        <br>
+
+        <a href="tel:2134779069">(+1) 213 477 9069</a>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+</body>
+
+<script>
+
+  let DATA = 'https://chinmaybadhe.github.io/assignment1/data/data.json';  
+  let textData=null;
+  async function fetchData(DATA) {
+
+    fetch(DATA)
+    .then((response) => response.json())
+    .then((data) => {
+
+
+      
+  for (let key in data) {
+      // console.log(key, data[key]);
+      let html='';
+      if(key=='section2'){
+
+        for (let key2 in data[key]) {
+
+          let htmlsegment= 
+        "<div class='cards' ><img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"><p class='cardHeading'>"+data[key][key2].heading+"</p><p class='cardBody'>"+data[key][key2].text+"</p></div>";
+
+          html+=htmlsegment;
+
+        }
+
+        let section2 =document.querySelector('.cardscontainer');
+        section2.innerHTML=html;
+      }
+
+      else if(key=='section3'){
+
+          let html='';
+          let htmlsegment= 
+            "<div id='section3text'><p>";
+
+          for (let key2 in data[key].text) {
+
+            htmlsegment+=data[key].text[key2]+"<br><br>";
+
+
+          }
+          htmlsegment+="</p></div><div id='section3image'>";
+          htmlsegment+="<img src=https://chinmaybadhe.github.io/assignment1/photos/lasky.png "+ "alt='LA Sky'></div>";
+
+
+          let section3 =document.querySelector('.section-3');
+          section3.innerHTML=htmlsegment;
+
+      }
+
+      else if(key=='section4'){
+
+                  let htmlsegment='';
+
+
+                  for (let key2 in data[key]) {
+
+                      
+
+                    console.log(data[key][key2].text);
+
+                    if(key2%2==0){
+
+                      htmlsegment+=
+
+                          "<div class='section4image'> <img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div><div class='section4text'><h1 class='heading' style='text-align: left'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div>";                
+                      }
+
+                    else{
+
+                      htmlsegment+=
+
+                          "<div class='section4text'><h1 class='heading' style='text-align: right'>"+data[key][key2].heading+"</h1><p>"+data[key][key2].text+"</p></div><div class='section4image'> <img src=https://chinmaybadhe.github.io/assignment1/photos/"+data[key][key2].image+" alt="+data[key][key2].heading+"></div>";       
+
+
+
+                    }
+                  let section4 =document.querySelector('.section-4');
+                  section4.innerHTML=htmlsegment;                  
+
+                  }
+
+                }
+
+              }
+
+
+            });  
+  }
+  fetchData(DATA);
+
+
+
+
+
+
+</script>
+</html>
