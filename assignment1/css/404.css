@@ -50,15 +50,15 @@
     float: left;
     
     width: 500px;
-    color: #eeeacd;
+    color: #ffb347;
 
   }
 
   a.navbarElements   {
-    color: #ffffff;
+    color: #ffb347;
   }
   a:hover   {
-    color: #cccccc;
+    color: #ffffff;
   }
   a:link {
 
@@ -68,7 +68,7 @@
   #message{
 
     width: 3000px ;
-    height: 1060px;
+    height: 760px;
     padding-left: 300px;
     padding-right: 300px;
     padding-top: 400px;
