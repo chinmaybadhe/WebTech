@@ -65,6 +65,31 @@
     text-decoration: none;
   }
 
+    #overlay-text{
+
+    position: absolute;
+    top: 300px;
+    left: 1100px;
+    width: 1122px;
+    height: 127px;
+
+    color: black    ;
+
+    font-size: 5em;
+  }
+
+  #image-overlay{
+    position: absolute;
+    top: 160px;
+    width: 3000px;
+    height: 800px;
+    left: 0px;
+
+    background-color: rgba(215, 151, 109,0.5);
+
+
+  }
+
   #message{
 
     width: 3000px ;
